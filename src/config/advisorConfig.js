@@ -16,6 +16,9 @@
  * 11. SEO & legal compliance
  */
 
+import advisorPortrait from '../assets/images/advisor-sudip-pathak.jpg';
+import heroFamily from '../assets/images/hero-family.jpg';
+
 export const advisorConfig = {
   // 1. Advisor Identity Details
   advisor: {
@@ -24,8 +27,8 @@ export const advisorConfig = {
     profession: "LIC Insurance Advisor",
     organization: "Life Insurance Corporation of India (LIC)",
     badgeText: "Independent LIC Insurance Advisor",
-    portraitImage: "/images/advisor-sudip-pathak.jpg",
-    heroFamilyImage: "/images/hero-family.jpg",
+    portraitImage: advisorPortrait,
+    heroFamilyImage: heroFamily,
     welcomeHeading: "A Message from Sudip Kumar Pathak",
     welcomeMessage: "Welcome. Choosing a life insurance plan is one of the most thoughtful decisions you will ever make for the people you love. My purpose as your LIC advisor is to replace confusion and marketing jargon with honest, transparent guidance tailored specifically to your family's budget, liabilities, and aspirations. Whether you are stepping into your first job, starting a family, or planning for your golden retirement years, I am committed to supporting you with integrity.",
     bio: "Dedicated to helping individuals and families understand life insurance and choose suitable financial protection solutions through LIC."
