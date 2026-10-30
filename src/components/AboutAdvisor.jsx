@@ -3,13 +3,10 @@ import { UserCheck, Shield, HelpCircle, FileCheck2, HeadphonesIcon, Phone, Messa
 import { advisorConfig } from '../config/advisorConfig';
 import { getCallingUrl, getWhatsAppUrl } from '../utils/whatsapp';
 
+const serviceIconComponents = [Shield, FileCheck2, HelpCircle, HeadphonesIcon];
+const serviceIconColors = ['text-amber-600', 'text-blue-600', 'text-emerald-600', 'text-indigo-600'];
+
 export default function AboutAdvisor() {
-  const serviceIcons = [
-    <Shield className="w-6 h-6 text-amber-600" />,
-    <FileCheck2 className="w-6 h-6 text-blue-600" />,
-    <HelpCircle className="w-6 h-6 text-emerald-600" />,
-    <HeadphonesIcon className="w-6 h-6 text-indigo-600" />
-  ];
 
   return (
     <section id="about" className="py-20 bg-white scroll-mt-20">
@@ -127,7 +124,9 @@ export default function AboutAdvisor() {
             >
               <div>
                 <div className="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-amber-50 border border-slate-100 group-hover:border-amber-200 flex items-center justify-center mb-5 transition-colors">
-                  {serviceIcons[index % serviceIcons.length]}
+                  {React.createElement(serviceIconComponents[index % serviceIconComponents.length], {
+                    className: `w-6 h-6 ${serviceIconColors[index % serviceIconColors.length]}`
+                  })}
                 </div>
                 <h4 className="text-lg font-bold text-[#002b49] mb-2 leading-snug group-hover:text-amber-600 transition-colors">
                   {service.title}

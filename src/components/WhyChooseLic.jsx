@@ -3,15 +3,10 @@ import { Landmark, Layers, ShieldCheck, UserCheck, HeartHandshake, Award, CheckC
 import { advisorConfig } from '../config/advisorConfig';
 import { getCallingUrl, getWhatsAppUrl } from '../utils/whatsapp';
 
-export default function WhyChooseLic() {
-  const icons = [
-    <Landmark className="w-8 h-8 text-amber-500" />,
-    <Layers className="w-8 h-8 text-blue-400" />,
-    <ShieldCheck className="w-8 h-8 text-emerald-400" />,
-    <UserCheck className="w-8 h-8 text-indigo-400" />,
-    <HeartHandshake className="w-8 h-8 text-rose-400" />
-  ];
+const pillarIconComponents = [Landmark, Layers, ShieldCheck, UserCheck, HeartHandshake];
+const pillarIconColors = ['text-amber-500', 'text-blue-400', 'text-emerald-400', 'text-indigo-400', 'text-rose-400'];
 
+export default function WhyChooseLic() {
   return (
     <section id="why-lic" className="py-20 bg-[#002b49] text-white relative overflow-hidden scroll-mt-20">
       {/* Background Glow */}
@@ -46,7 +41,9 @@ export default function WhyChooseLic() {
             >
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-500/20 group-hover:border-amber-500/30 transition-all">
-                  {icons[index % icons.length]}
+                  {React.createElement(pillarIconComponents[index % pillarIconComponents.length], {
+                    className: `w-8 h-8 ${pillarIconColors[index % pillarIconColors.length]}`
+                  })}
                 </div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">

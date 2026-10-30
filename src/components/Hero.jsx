@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageCircle, ArrowRight, ShieldCheck, CheckCircle2, Award, Calendar, HeartHandshake } from 'lucide-react';
+import { Phone, ArrowRight, ShieldCheck, CheckCircle2, Award, HeartHandshake, Calendar } from 'lucide-react';
 import { advisorConfig } from '../config/advisorConfig';
 import { getCallingUrl, getWhatsAppUrl } from '../utils/whatsapp';
 

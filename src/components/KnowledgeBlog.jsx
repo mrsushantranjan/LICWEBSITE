@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Clock, ArrowRight, MessageCircle, X, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { BookOpen, Clock, ArrowRight, MessageCircle, X, CheckCircle2 } from 'lucide-react';
 import { advisorConfig } from '../config/advisorConfig';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 

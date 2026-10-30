@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Heart, GraduationCap, Sun, CheckCircle2, MessageCircle, ArrowRight } from 'lucide-react';
+import { Briefcase, Heart, GraduationCap, Sun, CheckCircle2, MessageCircle } from 'lucide-react';
 import { advisorConfig } from '../config/advisorConfig';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 

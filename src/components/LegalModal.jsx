@@ -4,10 +4,12 @@ import { advisorConfig } from '../config/advisorConfig';
 
 export default function LegalModal({ isOpen, onClose, initialTab = 'disclaimer' }) {
   const [activeTab, setActiveTab] = React.useState(initialTab);
+  const [prevInitialTab, setPrevInitialTab] = React.useState(initialTab);
 
-  React.useEffect(() => {
+  if (initialTab !== prevInitialTab) {
+    setPrevInitialTab(initialTab);
     setActiveTab(initialTab);
-  }, [initialTab]);
+  }
 
   if (!isOpen) return null;
 

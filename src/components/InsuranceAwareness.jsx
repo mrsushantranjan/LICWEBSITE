@@ -3,14 +3,10 @@ import { ShieldAlert, TrendingUp, Home, Landmark, CheckCircle2, MessageCircle } 
 import { advisorConfig } from '../config/advisorConfig';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
-export default function InsuranceAwareness() {
-  const icons = [
-    <TrendingUp className="w-7 h-7 text-amber-600" />,
-    <Home className="w-7 h-7 text-blue-600" />,
-    <ShieldAlert className="w-7 h-7 text-emerald-600" />,
-    <Landmark className="w-7 h-7 text-indigo-600" />
-  ];
+const awarenessIconComponents = [TrendingUp, Home, ShieldAlert, Landmark];
+const awarenessIconColors = ['text-amber-600', 'text-blue-600', 'text-emerald-600', 'text-indigo-600'];
 
+export default function InsuranceAwareness() {
   return (
     <section id="awareness" className="py-20 bg-slate-50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +35,9 @@ export default function InsuranceAwareness() {
             >
               <div>
                 <div className="w-13 h-13 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-5">
-                  {icons[index % icons.length]}
+                  {React.createElement(awarenessIconComponents[index % awarenessIconComponents.length], {
+                    className: `w-7 h-7 ${awarenessIconColors[index % awarenessIconColors.length]}`
+                  })}
                 </div>
                 <h3 className="text-lg font-bold text-[#002b49] mb-2 leading-snug">
                   {pillar.title}

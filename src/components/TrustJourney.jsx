@@ -3,15 +3,10 @@ import { Compass, CheckCircle2, ShieldCheck, FileText, Headphones, Sparkles } fr
 import { advisorConfig } from '../config/advisorConfig';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
-export default function TrustJourney() {
-  const stepIcons = [
-    <Compass className="w-6 h-6 text-amber-600" />,
-    <FileText className="w-6 h-6 text-blue-600" />,
-    <ShieldCheck className="w-6 h-6 text-emerald-600" />,
-    <CheckCircle2 className="w-6 h-6 text-purple-600" />,
-    <Headphones className="w-6 h-6 text-rose-600" />
-  ];
+const stepIconComponents = [Compass, FileText, ShieldCheck, CheckCircle2, Headphones];
+const stepIconColors = ['text-amber-600', 'text-blue-600', 'text-emerald-600', 'text-purple-600', 'text-rose-600'];
 
+export default function TrustJourney() {
   return (
     <section id="journey" className="py-20 bg-slate-50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,7 +46,9 @@ export default function TrustJourney() {
                       {step.stepNumber}
                     </span>
                     <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center group-hover:bg-amber-50 transition-colors">
-                      {stepIcons[index % stepIcons.length]}
+                      {React.createElement(stepIconComponents[index % stepIconComponents.length], {
+                        className: `w-6 h-6 ${stepIconColors[index % stepIconColors.length]}`
+                      })}
                     </div>
                   </div>
 

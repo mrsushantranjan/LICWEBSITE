@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageCircle, MapPin, Clock, ShieldCheck, Navigation, ExternalLink, Calendar } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Clock, ShieldCheck, Navigation, Calendar } from 'lucide-react';
 import { advisorConfig } from '../config/advisorConfig';
 import { getCallingUrl, getWhatsAppUrl } from '../utils/whatsapp';
 

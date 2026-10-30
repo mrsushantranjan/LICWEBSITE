@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Send, MessageCircle, User, Phone, Briefcase, Calendar, HelpCircle, FileText, CheckCircle, AlertCircle, PhoneCall, ShieldCheck } from 'lucide-react';
+import { Send, MessageCircle, User, Phone, CheckCircle, AlertCircle, PhoneCall, ShieldCheck } from 'lucide-react';
 import { advisorConfig } from '../config/advisorConfig';
 import { buildEnquiryWhatsAppUrl } from '../utils/whatsapp';
 import { sanitizeText, isValidMobile } from '../utils/security';

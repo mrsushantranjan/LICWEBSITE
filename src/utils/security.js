@@ -25,6 +25,7 @@ export function sanitizeText(input, maxLength = 500) {
     // Strip HTML tags
     .replace(/<[^>]*>?/gm, '')
     // Remove control characters (except newline \n)
+    // eslint-disable-next-line no-control-regex
     .replace(/[\x00-\x09\x0B-\x1F\x7F]/g, '')
     // Normalize consecutive spaces
     .replace(/[ \t]+/g, ' ')

@@ -2,8 +2,7 @@ import { advisorConfig } from '../config/advisorConfig';
 import { 
   AUTHORIZED_WHATSAPP_NUMBER, 
   AUTHORIZED_CALLING_NUMBER, 
-  sanitizeText, 
-  isValidMobile 
+  sanitizeText 
 } from './security';
 
 /**

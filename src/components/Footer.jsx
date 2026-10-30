@@ -1,7 +1,9 @@
 import React from 'react';
-import { Shield, Phone, MessageCircle, Heart, ExternalLink } from 'lucide-react';
+import { Shield, Phone, MessageCircle, ExternalLink } from 'lucide-react';
 import { advisorConfig } from '../config/advisorConfig';
 import { getCallingUrl, getWhatsAppUrl } from '../utils/whatsapp';
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 export default function Footer({ onOpenLegal }) {
   return (
@@ -132,7 +134,7 @@ export default function Footer({ onOpenLegal }) {
         {/* Bottom Bar: Copyright & Modal Triggers */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            &copy; {new Date().getFullYear()} {advisorConfig.advisor.fullName} ({advisorConfig.advisor.popularName}). All rights reserved.
+            &copy; {CURRENT_YEAR} {advisorConfig.advisor.fullName} ({advisorConfig.advisor.popularName}). All rights reserved.
           </p>
 
           <div className="flex items-center gap-4">
