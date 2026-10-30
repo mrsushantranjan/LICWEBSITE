@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://licadvisor-guddubaba.in/sitemap.xml
